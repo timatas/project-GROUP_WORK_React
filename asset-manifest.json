@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/project-GROUP_WORK_React/static/css/main.7117ade8.css",
-    "main.js": "/project-GROUP_WORK_React/static/js/main.afe8013a.js",
+    "main.js": "/project-GROUP_WORK_React/static/js/main.eb9ee11f.js",
     "static/css/567.f8df7078.chunk.css": "/project-GROUP_WORK_React/static/css/567.f8df7078.chunk.css",
     "static/js/567.4295ffe3.chunk.js": "/project-GROUP_WORK_React/static/js/567.4295ffe3.chunk.js",
     "static/js/622.fdbf75a0.chunk.js": "/project-GROUP_WORK_React/static/js/622.fdbf75a0.chunk.js",
@@ -13,7 +13,7 @@
     "static/media/girl_mob@1x.jpg": "/project-GROUP_WORK_React/static/media/girl_mob@1x.5c11a6c447d636cc3782.jpg",
     "index.html": "/project-GROUP_WORK_React/index.html",
     "main.7117ade8.css.map": "/project-GROUP_WORK_React/static/css/main.7117ade8.css.map",
-    "main.afe8013a.js.map": "/project-GROUP_WORK_React/static/js/main.afe8013a.js.map",
+    "main.eb9ee11f.js.map": "/project-GROUP_WORK_React/static/js/main.eb9ee11f.js.map",
     "567.f8df7078.chunk.css.map": "/project-GROUP_WORK_React/static/css/567.f8df7078.chunk.css.map",
     "567.4295ffe3.chunk.js.map": "/project-GROUP_WORK_React/static/js/567.4295ffe3.chunk.js.map",
     "622.fdbf75a0.chunk.js.map": "/project-GROUP_WORK_React/static/js/622.fdbf75a0.chunk.js.map",
@@ -23,6 +23,6 @@
   },
   "entrypoints": [
     "static/css/main.7117ade8.css",
-    "static/js/main.afe8013a.js"
+    "static/js/main.eb9ee11f.js"
   ]
 }
