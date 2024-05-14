@@ -18,37 +18,45 @@ ReactModal.setAppElement('#root');
 
 function TrackerPage() {
   const [modal, setModal] = useState({ isOpen: false, content: null });
-  
+
   function openModal(content) {
     setModal({ isOpen: true, content });
   }
 
   function afterOpenModal() {
-    document.body.style.overflow = "hidden";
+    document.body.style.overflow = 'hidden';
   }
 
   function closeModal() {
     setModal({ isOpen: false, content: null });
-    document.body.style.overflow = "scroll";
+    document.body.style.overflow = 'scroll';
   }
 
   return (
     <div className={style.container}>
       <WaterMainInfo />
-      <WaterDetailedInfo openWaterModal={openModal}/>
+      <WaterDetailedInfo openWaterModal={openModal} />
       <AddWaterBtn openAddWaterModal={openModal} />
-      {modal.isOpen && <Modal isMainModalOpen={modal.isOpen} onClose={closeModal} onAfterOpen={afterOpenModal}>
-        {((modal.content === "add") || (modal.content === "edit")) && (
-          <WaterModal modal={modal} onClose={closeModal}>
-            {modal.content === "add" && <AddWaterForm />}
-            {modal.content === "edit" && <EditWaterForm />}
-          </WaterModal>
-        )}
-        {modal.content === "delete" && <DeleteWaterModal onClose={closeModal} />}
-        {modal.content === "logout" && <LogOutModal onClose={closeModal} />}
-      </Modal>}
+      {modal.isOpen && (
+        <Modal
+          isMainModalOpen={modal.isOpen}
+          onClose={closeModal}
+          onAfterOpen={afterOpenModal}
+        >
+          {(modal.content === 'add' || modal.content === 'edit') && (
+            <WaterModal modal={modal} onClose={closeModal}>
+              {modal.content === 'add' && <AddWaterForm />}
+              {modal.content === 'edit' && <EditWaterForm />}
+            </WaterModal>
+          )}
+          {modal.content === 'delete' && (
+            <DeleteWaterModal onClose={closeModal} />
+          )}
+          {modal.content === 'logout' && <LogOutModal onClose={closeModal} />}
+        </Modal>
+      )}
     </div>
   );
-};
+}
 
 export default TrackerPage;
