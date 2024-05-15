@@ -1,31 +1,35 @@
 {
   "files": {
     "main.css": "/project-GROUP_WORK_React/static/css/main.7117ade8.css",
-    "main.js": "/project-GROUP_WORK_React/static/js/main.ba76a4ac.js",
-    "static/css/567.f8df7078.chunk.css": "/project-GROUP_WORK_React/static/css/567.f8df7078.chunk.css",
-    "static/js/567.4295ffe3.chunk.js": "/project-GROUP_WORK_React/static/js/567.4295ffe3.chunk.js",
+    "main.js": "/project-GROUP_WORK_React/static/js/main.e923f7c6.js",
+    "static/css/393.c28382d9.chunk.css": "/project-GROUP_WORK_React/static/css/393.c28382d9.chunk.css",
+    "static/js/393.fb702d89.chunk.js": "/project-GROUP_WORK_React/static/js/393.fb702d89.chunk.js",
     "static/js/622.fdbf75a0.chunk.js": "/project-GROUP_WORK_React/static/js/622.fdbf75a0.chunk.js",
-    "static/js/75.55153b70.chunk.js": "/project-GROUP_WORK_React/static/js/75.55153b70.chunk.js",
-    "static/css/869.5469f7d3.chunk.css": "/project-GROUP_WORK_React/static/css/869.5469f7d3.chunk.css",
-    "static/js/869.c39e4408.chunk.js": "/project-GROUP_WORK_React/static/js/869.c39e4408.chunk.js",
-    "static/js/713.b4b62116.chunk.js": "/project-GROUP_WORK_React/static/js/713.b4b62116.chunk.js",
+    "static/css/697.8bdde0cf.chunk.css": "/project-GROUP_WORK_React/static/css/697.8bdde0cf.chunk.css",
+    "static/js/697.f20fce97.chunk.js": "/project-GROUP_WORK_React/static/js/697.f20fce97.chunk.js",
+    "static/css/978.c0fce1b0.chunk.css": "/project-GROUP_WORK_React/static/css/978.c0fce1b0.chunk.css",
+    "static/js/978.3ae1ca42.chunk.js": "/project-GROUP_WORK_React/static/js/978.3ae1ca42.chunk.js",
+    "static/js/586.780540ca.chunk.js": "/project-GROUP_WORK_React/static/js/586.780540ca.chunk.js",
+    "static/js/644.0558512b.chunk.js": "/project-GROUP_WORK_React/static/js/644.0558512b.chunk.js",
     "static/media/girl_tab@1x.jpg": "/project-GROUP_WORK_React/static/media/girl_tab@1x.35431373218e03b12767.jpg",
     "static/media/girl_desk@1x.jpg": "/project-GROUP_WORK_React/static/media/girl_desk@1x.b377784b225846f20425.jpg",
     "static/media/girl_mob@1x.jpg": "/project-GROUP_WORK_React/static/media/girl_mob@1x.5c11a6c447d636cc3782.jpg",
     "static/media/sprite.svg": "/project-GROUP_WORK_React/static/media/sprite.2bf8f9639d252ed3e16b005e3ed34a16.svg",
     "index.html": "/project-GROUP_WORK_React/index.html",
     "main.7117ade8.css.map": "/project-GROUP_WORK_React/static/css/main.7117ade8.css.map",
-    "main.ba76a4ac.js.map": "/project-GROUP_WORK_React/static/js/main.ba76a4ac.js.map",
-    "567.f8df7078.chunk.css.map": "/project-GROUP_WORK_React/static/css/567.f8df7078.chunk.css.map",
-    "567.4295ffe3.chunk.js.map": "/project-GROUP_WORK_React/static/js/567.4295ffe3.chunk.js.map",
+    "main.e923f7c6.js.map": "/project-GROUP_WORK_React/static/js/main.e923f7c6.js.map",
+    "393.c28382d9.chunk.css.map": "/project-GROUP_WORK_React/static/css/393.c28382d9.chunk.css.map",
+    "393.fb702d89.chunk.js.map": "/project-GROUP_WORK_React/static/js/393.fb702d89.chunk.js.map",
     "622.fdbf75a0.chunk.js.map": "/project-GROUP_WORK_React/static/js/622.fdbf75a0.chunk.js.map",
-    "75.55153b70.chunk.js.map": "/project-GROUP_WORK_React/static/js/75.55153b70.chunk.js.map",
-    "869.5469f7d3.chunk.css.map": "/project-GROUP_WORK_React/static/css/869.5469f7d3.chunk.css.map",
-    "869.c39e4408.chunk.js.map": "/project-GROUP_WORK_React/static/js/869.c39e4408.chunk.js.map",
-    "713.b4b62116.chunk.js.map": "/project-GROUP_WORK_React/static/js/713.b4b62116.chunk.js.map"
+    "697.8bdde0cf.chunk.css.map": "/project-GROUP_WORK_React/static/css/697.8bdde0cf.chunk.css.map",
+    "697.f20fce97.chunk.js.map": "/project-GROUP_WORK_React/static/js/697.f20fce97.chunk.js.map",
+    "978.c0fce1b0.chunk.css.map": "/project-GROUP_WORK_React/static/css/978.c0fce1b0.chunk.css.map",
+    "978.3ae1ca42.chunk.js.map": "/project-GROUP_WORK_React/static/js/978.3ae1ca42.chunk.js.map",
+    "586.780540ca.chunk.js.map": "/project-GROUP_WORK_React/static/js/586.780540ca.chunk.js.map",
+    "644.0558512b.chunk.js.map": "/project-GROUP_WORK_React/static/js/644.0558512b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7117ade8.css",
-    "static/js/main.ba76a4ac.js"
+    "static/js/main.e923f7c6.js"
   ]
 }
