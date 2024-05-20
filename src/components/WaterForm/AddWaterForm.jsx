@@ -1,23 +1,22 @@
-import * as Yup from "yup";
-import { yupResolver } from "@hookform/resolvers/yup"
-import { useForm } from "react-hook-form";
-//import { useDispatch } from 'react-redux';
-//import toast from 'react-hot-toast';
-//import { addWater } from "../../redux/water/operations";
-import sprite from "../../img/svg/sprite.svg";
-import css from "./WaterForm.module.css";
+import * as Yup from 'yup';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { useForm } from 'react-hook-form';
+import { useDispatch } from 'react-redux';
+import toast from 'react-hot-toast';
+import { addWater } from '../../redux/water/operations';
+import sprite from '../../img/svg/sprite.svg';
+import css from './WaterForm.module.css';
 
-
-
+import { nanoid } from 'nanoid';
 
 const schema = Yup.object().shape({
-  amount: Yup.number("Must be a number")
-    .typeError("Must be a number")
-    .lessThan(1001, "Too much")
-    .positive("The data is not entered correctly")
-    .integer("Must be more than 0")
-    .required("Required field!"),
-  time: Yup.string().required("Required field!"),
+  amount: Yup.number('Must be a number')
+    .typeError('Must be a number')
+    .lessThan(1001, 'Too much')
+    .positive('The data is not entered correctly')
+    .integer('Must be more than 0')
+    .required('Required field!'),
+  time: Yup.string().required('Required field!'),
 });
 
 function getCurrentTime() {
@@ -50,58 +49,60 @@ export const AddWaterForm = ({ onClose }) => {
     defaultValues: {
       time: currentTime,
       amount: 50,
-    }
+    },
   });
 
-//  const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   const onSubmit = (values, actions) => {
-   // dispatch(addWater({ ...values }))
-   //   .unwrap()
-   //   .then(() => {
-   //     toast.success('Water successfully added!', {
-   //       style: {
-   //         border: '1px solid #0d47a1',
-   //         padding: '16px',
-   //         color: '#9BE1A0',
-   //       },
-   //       iconTheme: {
-   //         primary: '#9BE1A0',
-   //         secondary: '#fff',
-   //       },
-   //     });
-   //     onClose();
-   //   })
-   //   .catch(() => {
-   //     toast.error('Oops, something go wrong!', {
-   //       style: {
-   //         border: '1px solid #F1041B',
-   //         padding: '16px',
-   //         color: '#323F47',
-   //       },
-   //       iconTheme: {
-   //         primary: '#F1041B',
-   //         secondary: '#fff',
-   //       },
-   //     });
-   //   })
+    console.log(values);
+    dispatch(addWater({ id: nanoid(3), ...values }))
+      .unwrap()
+      .then(() => {
+        toast.success('Water successfully added!', {
+          style: {
+            border: '1px solid #0d47a1',
+            padding: '16px',
+            color: '#9BE1A0',
+          },
+          iconTheme: {
+            primary: '#9BE1A0',
+            secondary: '#fff',
+          },
+        });
+        actions.resetForm();
+        onClose();
+      })
+      .catch(() => {
+        toast.error('Oops, something go wrong!', {
+          style: {
+            border: '1px solid #F1041B',
+            padding: '16px',
+            color: '#323F47',
+          },
+          iconTheme: {
+            primary: '#F1041B',
+            secondary: '#fff',
+          },
+        });
+      });
   };
 
-  const amount = watch("amount", 50);
-  const time = watch("time", currentTime);
+  const amount = watch('amount', 50);
+  const time = watch('time', currentTime);
 
   const handleIncrement = () => {
     if (amount >= 999) {
       return;
     }
-    setValue("amount", Math.floor(parseInt(amount) / 50) * 50 + 50);
+    setValue('amount', Math.floor(parseInt(amount) / 50) * 50 + 50);
   };
 
   const handleDecrement = () => {
     if (amount <= 50) {
       return;
     }
-    setValue("amount", Math.floor(parseInt(amount) / 50) * 50 - 50);
+    setValue('amount', Math.floor(parseInt(amount) / 50) * 50 - 50);
   };
 
   return (
@@ -111,13 +112,21 @@ export const AddWaterForm = ({ onClose }) => {
         <div className={css.stepperItem}>
           <p className={css.itemTitle}>Amount of water:</p>
           <div className={css.stepper}>
-            <button className={css.stepButton} type="button" onClick={handleDecrement}>
+            <button
+              className={css.stepButton}
+              type="button"
+              onClick={handleDecrement}
+            >
               <svg className={css.icon} width="14" height="14">
                 <use xlinkHref={`${sprite}#icon-minus`}></use>
               </svg>
             </button>
             <p className={css.stepperAmount}>{amount} ml</p>
-            <button className={css.stepButton} type="button" onClick={handleIncrement}>
+            <button
+              className={css.stepButton}
+              type="button"
+              onClick={handleIncrement}
+            >
               <svg className={css.icon} width="14" height="14">
                 <use xlinkHref={`${sprite}#icon-plus`}></use>
               </svg>
@@ -126,22 +135,36 @@ export const AddWaterForm = ({ onClose }) => {
         </div>
         <div className={css.inputItem}>
           <div className={css.item}>
-            <label className={css.itemTitle} htmlFor="time">Recording time:</label>
-            <input className={`${css.input} ${errors.time && css.inputError}`}
+            <label className={css.itemTitle} htmlFor="time">
+              Recording time:
+            </label>
+            <input
+              className={`${css.input} ${errors.time && css.inputError}`}
               id="time"
               type="time"
               value={time}
-              onChange={(e) => setValue("time", e.target.value)}
+              onChange={e => setValue('time', e.target.value)}
             />
-            {errors.time && (<p className={css.error}>{errors.time.message}</p>)}
+            {errors.time && <p className={css.error}>{errors.time.message}</p>}
           </div>
           <div className={css.item}>
-            <label className={css.amountLabel} htmlFor="amount">Enter the value of the water used:</label>
-            <input className={`${css.input} ${errors.amount && css.inputError}`} type="number" name="amount" {...register("amount")} />
-            {errors.amount && (<p className={css.error}>{errors.amount.message}</p>)}
+            <label className={css.amountLabel} htmlFor="amount">
+              Enter the value of the water used:
+            </label>
+            <input
+              className={`${css.input} ${errors.amount && css.inputError}`}
+              type="number"
+              name="amount"
+              {...register('amount')}
+            />
+            {errors.amount && (
+              <p className={css.error}>{errors.amount.message}</p>
+            )}
           </div>
         </div>
-        <button className={css.saveButton} type="submit">Save</button>
+        <button className={css.saveButton} type="submit">
+          Save
+        </button>
       </form>
     </div>
   );
